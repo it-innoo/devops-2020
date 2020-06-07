@@ -1,0 +1,7 @@
+Script started on 2020-06-07 23:45:22+0300
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS               NAMES
+7acbc1d1d9c6        alpine              "/bin/sh"                5 minutes ago       Exited (0) 5 minutes ago                        modest_agnesi
+d2bcdcf10c20        httpd               "httpd-foreground"       7 minutes ago       Up 7 minutes                80/tcp              practical_euclid
+0329fd824002        nginx               "/docker-entrypoint.…"   16 minutes ago      Exited (0) 15 minutes ago                       practical_lehmann
+
+Script done on 2020-06-07 23:45:22+0300
