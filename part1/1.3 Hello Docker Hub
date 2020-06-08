@@ -1,0 +1,15 @@
+Script started on 2020-06-08 13:23:17+0300
+Unable to find image 'devopsdockeruh/pull_exercise:latest' locally
+latest: Pulling from devopsdockeruh/pull_exercise
+
+[1A[2K8e402f1a9c57: Pulling fs layer [1B
+[1A[2K5e2195587d10: Pulling fs layer [1B
+[1A[2K6f595b2fc66d: Pulling fs layer [1B
+[1A[2K165f32bf4e94: Pulling fs layer [1B
+Status: Downloaded newer image for devopsdockeruh/pull_exercise:latest
+[1G[0JGive me the password: [23Gbasics
+You found the correct password. Secret message is:
+"This is the secret message"
+
+
+Script done on 2020-06-08 13:23:48+0300
