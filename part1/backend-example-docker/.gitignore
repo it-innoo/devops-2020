@@ -62,3 +62,8 @@ typings/
 
 logs.txt
 
+<<<<<<< HEAD
+=======
+# Don't want to spoil the exercise solutions
+Dockerfile*
+>>>>>>> 4c30dfeffd61313431c2922f0858c5ade7d2153e
