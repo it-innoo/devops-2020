@@ -3,7 +3,7 @@
 
 ```
 $ docker pull hulluukko/github-page
-$ docker run hulluukko/github-page
+$ docker run -p 8080:8080 hulluukko/github-page
 ```
 
 
