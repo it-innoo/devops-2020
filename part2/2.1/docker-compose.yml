@@ -1,0 +1,9 @@
+version: '3.8' 
+
+services:
+
+    app:
+        image: devopsdockeruh/first_volume_exercise
+        volumes: 
+            - ${PWD}/logs.txt:/usr/app/logs.txt
+        container_name: first_volume_exercise
