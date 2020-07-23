@@ -2,9 +2,11 @@ version: '3.8'
 
 services:
     redis:
-        image: redis_container
+        image: redis:alpine
         ports:
-            - "6379:6379"
+            - "6379"
+        networks:
+            - backend
     
     frontend:
         image: frontend:latest
@@ -17,7 +19,12 @@ services:
         image: backend:latest
         ports:
             - "8000:8000"
+        networks:
+            - backend
         environment:
             - "FRONT_URL=http://localhost:5000"
             - "REDIS=redis"
+
+networks:
+  backend:
 
