@@ -1,3 +1,3 @@
-& git clone https://github.com/docker-hy/scaling-exercise
-& cd scaling-exercise
-& docker-compose up --scale compute=2
+$ git clone https://github.com/docker-hy/scaling-exercise
+$ cd scaling-exercise
+$ docker-compose up --scale compute=2
