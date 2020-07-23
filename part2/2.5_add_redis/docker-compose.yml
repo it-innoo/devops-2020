@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+    redis:
+        image: redis_container
+        ports:
+            - "6379:6379"
+    
+    frontend:
+        image: frontend:latest
+        ports:
+            - "5000:5000"
+        environment:
+            - "API_URL=http://localhost:8000"
+
+    backend:
+        image: backend:latest
+        ports:
+            - "8000:8000"
+        environment:
+            - "FRONT_URL=http://localhost:5000"
+            - "REDIS=redis"
+
