@@ -2,17 +2,15 @@ version: '3.8'
 
 services:
     frontend:
-        image: frontend:latest
+        image: frontend
         ports:
-            - "5000:5000"
+            - 5000:5000
         environment:
-            - "API_URL=http://localhost:8000"
+            - API_URL=http://localhost:8000
 
     backend:
-        image: backend:latest
-        volumes: 
-            - ${PWD}/logs.txt:/usr/app/logs.txt
+        image: backend
         ports:
-            - "8000:8000"
+            - 8000:8000
         environment:
-            - "FRONT_URL=http://localhost:5000"
+            - FRONT_URL=http://localhost:5000

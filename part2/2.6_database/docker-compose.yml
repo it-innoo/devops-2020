@@ -5,23 +5,20 @@ services:
   db:
     image: postgres
     restart: unless-stopped
-    networks:
-      - backend
     environment:
       POSTGRES_PASSWORD: example
+      POSTGRES_DB: example
     container_name: db_container
-    volumes:
-      - database:/var/lib/postgresql/data
 
   backend:
     image: backend:latest
-    networks:
-      - backend
     ports:
-      - "8000:8000"
+      - 8000:8000
     environment:
-      - BACKEND_DB_POSTGRES=db
-      - BACKEND_DB_PASSWORD=example
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=example
+      - DB_NAME=example
+      - DB_HOST=db
       - FRONT_URL=http://localhost:5000
       - REDIS=redis
     depends_on:
@@ -30,9 +27,7 @@ services:
   frontend:
         image: frontend:latest
         ports:
-            - "5000:5000"
-        networks:
-            - frontend
+            - 5000:5000
         environment:
             - API_URL=http://localhost:8000
 
@@ -40,12 +35,4 @@ services:
         image: redis:alpine
         ports:
             - "6379"
-        networks:
-            - backend
 
-volumes:
-  database:
-
-networks:
-  backend:
-  frontend:
