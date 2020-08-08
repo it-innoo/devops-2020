@@ -22,22 +22,22 @@ services:
       POSTGRES_DB: example
 
   backend:
-    image: hulluukko/backend
+    image: backend
     ports:
       - 8000:8000
     environment:
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=example
+      - DB_NAME=example
+      - DB_HOST=db
       - FRONT_URL=http://localhost:5000
       - REDIS=redis
-      - BACKEND_DB_USERNAME=postgres
-      - BACKEND_DB_PASSWORD=example
-      - BACKEND_DB_NAME=example
-      - BACKEND_DB_HOST=db
     depends_on:
       - db
       - redis
 
   frontend:
-        image: hulluukko/frontend
+        image: frontend
         ports:
             - 5000:5000
         environment:
